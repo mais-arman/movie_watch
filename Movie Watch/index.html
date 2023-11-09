@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Movie">
+    <title>Movie Watch List</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Add a Movie to Watch List</h1>
+        <form autocomplete="of" id="addForm"> 
+            <label for="movieTitle"><i>Movie Title</i></label>
+            <input type="text" id="movieTitle" name="movieTitle"><br>
+            
+            <br><label for="movieLanguage"><i>Movie Language</i></label>
+
+            <input type="radio" id="englishLanguage" name="movieLanguage" value="English" checked>
+            <label for="englishLanguage">English</label>
+
+            <input type="radio" id="arabicLanguage" name="movieLanguage" value="العربية">
+            <label for="arabicLanguage">العربية</label><br>
+
+
+            <br><label for="movieGenre"><i>Movie Genre</i></label>
+            <select id="movieGenre" name="movieGenre">
+                <option value="action">Action</option>
+                <option value="thriller">Thriller</option>
+                <option value="animation">Animation</option>
+                <option value="comedy">Comedy</option>
+            </select>
+            <br>
+
+            <br><input type="checkbox" id="ratedCheckbox" name="ratedCheckbox">
+            <label for="ratedCheckbox"><b>This movie is R-Rated (18+)</b></label><br>
+
+
+            <br>
+            <br><input type="submit" value="Add Movie" >
+        </form>
+        <br>
+        <hr>
+    </header>
+
+    <header>
+        <h1>The Watch List</h1>
+        <table id="movieTable">
+            <thead>
+                <tr>
+                    <th><b><i>#</b></i></th>
+                    <th><b><i>Movie Title</b></i></th>
+                    <th><b><i>Movie Language</b></i></th>
+                    <th><b><i>Movie Genre</b></i></th>
+                    <th><b><i>Is it R-Rated?</b></i></th>
+                    <th><b><i>Actions</b></i></th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </header>
+
+    <script src="main.js"></script>
+</body>
+</html>
